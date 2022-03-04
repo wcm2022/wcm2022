@@ -1,0 +1,22 @@
+git clone --recurse-submodules https://github.com/你的github帳號/wcm2022.git
+
+建立 y:\ 中的 home_ipv6 目錄
+
+git config --global http.proxy http://[2001:288:6004:17::42]:3128
+
+git config --global user.name "你的github帳號"
+
+git config --global user.email "你登記在 github 的電子郵箱"
+
+建立 github 權限 token -> Settings -> Developer settings -> 建立 30 天效期的 repo 改版的權限 
+
+要將 token 字串放入 wcm2022 倉儲下 .git 目錄中 config 檔案內
+
+[remote "origin"]
+	url = https://你複製下來的token字串@github.com/你的github帳號/wcm2022.git
+    
+進入 y:\tmp\wcm2022 倉儲所在位置, 執行 cms 就可以開啟近端的動態網頁
+
+https://localhost:9443 以 admin 登入, 就可以開始編輯近端的動態系統內容
+
+學會如何編輯動態頁面, 並轉為靜態網頁 (generate_pages) 之後, 再以 acp "提交字串" 將改版推向遠端
